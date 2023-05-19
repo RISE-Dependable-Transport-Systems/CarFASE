@@ -1,0 +1,8 @@
+<campaign_data>
+    <data target_sensor="min 40 50 0" start_time="25" end_time="28" noise_type="poisson" />
+    <start_time>30.0</start_time>
+    <end_time>40.0</end_time>
+    <b_factor>7.5</b_factor>
+    <noise_type>brightness</noise_type>
+    <ex_nr>5460</ex_nr>
+</campaign_data>
