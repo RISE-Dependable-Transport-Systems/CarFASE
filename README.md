@@ -52,96 +52,15 @@ Follow the instructions provided by the OpenPilot [here](https://github.com/comm
 	
 </configure>
 ```
-4.  
+3. Depending on the selected scenario, move the **bridge.py** and **scenario_setup.py** scripts from traffic_scenarios/.. directory to the sim folder in OpenPilot
 
-3. To use the **ComFASE** in the desired part of the code, add below lines to call comfase header file: 
+4. Make sure the paths in the scripts are adjusted according to your system, for example in below line:
 ```
-#include "veins/base/utils/FindModule.h"
-#include "<path to comfase>comfase/src/comfase/attackInjection/Injector.h"
-```
-Note: the path to the **Injector.h** file can be different depending on your directory.
-
-for **Delay** and **DoS** attacks the following lines are added into the "channelAccess.cc" in source code of the Veins
-```
-    auto comfase = FindModule<injectorV*>::findGlobalModule();
-    if (comfase->DelayAttack){
-        std::cout<<"Delay Attack = is TRUE"<<std::endl;
-        float correctValue = receiverPos.distance(senderPos) / BaseWorldUtility::speedOfLight();
-        return comfase->PropagationDelayAttack(senderModule->getId(), receiverModule->getId(), correctValue);
-    }
-    else if (comfase->DoSAttack){
-        std::cout<<"DoS Attack = is TRUE"<<std::endl;
-        float correctValue = receiverPos.distance(senderPos) / BaseWorldUtility::speedOfLight();
-        return comfase->DenialOfServiceAttack(senderModule->getId(), receiverModule->getId(), correctValue);
-    }
-    else{
-    // this time-point is used to calculate the distance between sending and receiving host
-        return receiverPos.distance(senderPos) / BaseWorldUtility::speedOfLight();
-    }
-```
-3. Update **ned** file of the example that you want to run by adding: 
-``` 
-import comfase.comfase.injectorVeins.injectorV;
-```
-and 
-```
-        comfase: injectorV {
-            @display("p=120,50;i=abstract/penguin");
-        }
-```
-4. Update your example **ini** file by adding "attackInjection.ini" as following:
-```
-include <path to comfase>comfase/src/comfase/injectorVeins/injectorV.ini
+client.start_recorder("/replace with your own system's path where you want to store the data/carla_log/Ex_{}_record_{}.log".format(experiment_nr, current_time()), True)
 ```
 
-5. Compile the code to make it ready to run (build all projects in OMNeT++ IDE)
+5. Run **auto_run.py** script to start the excecution of the campaign.
 
-## Option2: ComFASE in cmd environment
-
-
------------------------
-# ComFASE Running
-## Option1: in OMNeT++ IDE
-Configure the attack injection scenario through updating the **attackInjection.ini** file as denoted below, and run the desired example.
-```
-##########################################################
-#                       Attack Start                     #
-##########################################################
-*.comfase.attackStartTime 	= ${attackStartTime = 12}s
-###                      Attack End                       #
-###########################################################
-*.comfase.attackEndTime 	= ${attackEndTime = 15}s # This is not for DoS attack
-#
-##          Target Vehicle and Attack Surface             #
-###########################################################
-*.comfase.attackNode 		= 27
-*.comfase.attackActive 	= false
-*.comfase.attackOnSender 	= true
-*.comfase.attackOnReceiver = false
-#
-#
-##                     Delay Attack                       #
-###########################################################
-*.comfase.DelayAttack = true
-*.comfase.myPDValue 		= ${myPDValue = 0.5}s
-#
-#
-##                      DoS Attack                        #
-###########################################################
-*.comfase.DoSAttack = false
-*.comfase.myPDforDoS		= ${myPDforDoS = 60}s 
-```
-
-## Option2: in cmd
-A Python script is written to run the ComFASE experiments, before running that you can define your attack injection setup such as target node (target vehicle), attack type (Delay or DoS), and target attack surface (sender, receiver or both):
-```
-Node=27  		     # NODE/VEHICLE UNDER ATTACK
-Activation='true'	     # BOOLEAN FOR ATTACK ACTIVATION
-Delay='true'	             # BOOLEAN FOR DELAY
-Sender='true'   	     # BOOLEAN FOR TARGET SURFACE FOR SENDER
-Receiver='true' 	     # BOOLEAN FOR TARGET SURFACE FOR RECEIVER
-for t in numpy.arange(17.0, 21.9, 0.2):  # This loop defines the target time to inject attack
-```
 ## Result Analysis
 
 
