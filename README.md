@@ -20,17 +20,12 @@ Note: CarmFASE is tested on the below-mentioned versions of the simulators:
 * [Carla 0.9.13](https://carla.org/2021/11/16/release-0.9.13/)
 * [OpenPilot 0.8.12](https://github.com/commaai/openpilot/releases/tag/v0.8.12) 
 
-Follow the instructions provided by OpenPilot [here](https://github.com/commaai/openpilot/blob/master/tools/README.md) to get the simulation running.
+Follow the instructions provided by the OpenPilot [here](https://github.com/commaai/openpilot/blob/master/tools/README.md) to get the simulation running.
 
-### Integrating CarFASE into the Simulators
+### Integrating CarFASE into the OpenPilot
 1. Clone the [CarFASE](https://github.com/RISE-Dependable-Transport-Systems/CarFASE) repository into the sim folder in **../openpilot/tools/sim**
-<p align="center">
-  <br><br>
-  <img src="https://github.com/RISE-Dependable-Transport-Systems/ComFASE/blob/main/Documentation/pictures/veins_ref.png" width="450" height="300">
-  <img src="https://github.com/RISE-Dependable-Transport-Systems/ComFASE/blob/main/Documentation/pictures/plexe_ref.png" width="450" height="300">
-</p>
-<br/> 
-<br/> 
+2. 
+3.  
 
 3. To use the **ComFASE** in the desired part of the code, add below lines to call comfase header file: 
 ```
