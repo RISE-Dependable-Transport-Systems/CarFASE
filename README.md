@@ -11,21 +11,19 @@ with its connection to Carla and OpenPilot.
 CarFASE consists of three main components, scenario configurator, fault library, and campaign configurator. The scenario configurator is responsible for creating a scenario that consists of a number of vehicles, a certain weather condition, the choice of maps, and the trajectory of vehicles. The fault library contains implementations of different fault models. Finally, the campaign configurator is responsible for applying the chosen fault parameters.
 
 
-# ComFASE Integration
-## Option1: ComFASE in OMNeT++ IDE
-Before integrating ComFASE into the simulator, it is recommended to have all the simulators running on your system. You can follow the instructions on the OMNeT++, Veins, and Plexe webpages to install them and get them ready to run. 
+# CarFASE Integration
+## Step1: setup of Carla and OpenPilot
+Prepare the simulation environment by downloading the below-mentioned versions of Carla and OpenPilot.
 
-Note: ComFASE is tested in the below-mentioned versions of the simulators:
+Note: CarmFASE is tested on the below-mentioned versions of the simulators:
 
-* [OMNeT++ 5.6.2](https://omnetpp.org/software/2020/01/13/omnet-5-6-released)
-* [Veins 5.1](https://github.com/sommer/veins/releases/tag/veins-5.1)    ``` git clone -b veins-5.1 https://github.com/sommer/veins.git  ```
-* [Plexe 3.0a2](https://github.com/michele-segata/plexe/releases/tag/plexe-3.0a3)   ``` git clone -b plexe-3.0a2 https://github.com/michele-segata/plexe.git ```
-* [SUMO 1.8.0](https://sourceforge.net/projects/sumo/files/sumo/version%201.8.0/)
+* [Carla 0.9.13](https://carla.org/2021/11/16/release-0.9.13/)
+* [OpenPilot 0.8.12](https://github.com/commaai/openpilot/releases/tag/v0.8.12) 
 
+Follow the instructions provided by OpenPilot [here](https://github.com/commaai/openpilot/blob/master/tools/README.md) to get the simulation running.
 
-### Integrating ComFASE into the Simulators
-1. Clone the [ComFASE](https://github.com/RISE-Dependable-Transport-Systems/ComFASE) project and import it into the OMNeT++ IDE.
-2. Reference ComFASE in Veins and Plexe as below:
+### Integrating CarFASE into the Simulators
+1. Clone the [CarFASE](https://github.com/RISE-Dependable-Transport-Systems/CarFASE) repository into the sim folder in **../openpilot/tools/sim**
 <p align="center">
   <br><br>
   <img src="https://github.com/RISE-Dependable-Transport-Systems/ComFASE/blob/main/Documentation/pictures/veins_ref.png" width="450" height="300">
