@@ -52,14 +52,14 @@ Follow the instructions provided by the OpenPilot [here](https://github.com/comm
 	
 </configure>
 ```
-3. Depending on the selected scenario, move the **bridge.py** and **scenario_setup.py** scripts from traffic_scenarios/.. directory to the sim folder in OpenPilot
+3. Depending on the selected scenario, move the **bridge.py** and **scenario_setup.py** scripts from traffic_scenarios/.. directory to the sim folder in OpenPilot **../openpilot/tools/sim**
 
-4. Make sure the paths in the scripts are adjusted according to your system, for example in below line:
+4. Make sure the paths in the scripts are adjusted according to your system directory, for example in below line:
 ```
 client.start_recorder("/replace with your own system's path where you want to store the data/carla_log/Ex_{}_record_{}.log".format(experiment_nr, current_time()), True)
 ```
 
-5. Run **auto_run.py** script to start the excecution of the campaign.
+5. Run **auto_run.py** script to start the execution of the campaign.
 
 ## Result Analysis
 
