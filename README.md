@@ -8,9 +8,9 @@ with its connection to Carla and OpenPilot.
 </p>
 <br/> 
 <br/> 
-
 CarFASE consists of three main components, scenario configurator, fault library, and campaign configurator. The scenario configurator is responsible for creating a scenario that consists of a number of vehicles, a certain weather condition, the choice of maps, and the trajectory of vehicles. The fault library contains implementations of different fault models. Finally, the campaign configurator is responsible for applying the chosen fault parameters.
------------------------
+
+
 # ComFASE Integration
 ## Option1: ComFASE in OMNeT++ IDE
 Before integrating ComFASE into the simulator, it is recommended to have all the simulators running on your system. You can follow the instructions on the OMNeT++, Veins, and Plexe webpages to install them and get them ready to run. 
