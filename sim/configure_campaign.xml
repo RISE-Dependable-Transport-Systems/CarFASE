@@ -2,7 +2,7 @@
 
 <configure>
 
-	<!-- ################################## Attack Model Selection ################################## -->
+	<!-- ################################## Fault Model Selection ################################## -->
 	<Fault_type 
 	brightness="true"
 	s_p="false"

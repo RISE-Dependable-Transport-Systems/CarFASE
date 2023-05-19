@@ -77,7 +77,7 @@ def main():
         blueprints = world.get_blueprint_library().filter('vehicle.*')
         tm = client.get_trafficmanager(args.tm_port)
         tm.set_random_device_seed(12)
-        client.start_recorder("/replace with path to log/carla_log/Ex_{}_record_{}.log".format(experiment_nr, current_time()), True)
+        client.start_recorder("/replace with your own system path where you want to store data/carla_log/Ex_{}_record_{}.log".format(experiment_nr, current_time()), True)
         # --------------
         # Locations to spawn
         Lead_vehicle_location=  carla.Transform(carla.Location(x=25.379946, y=244.533249, z=0.300000), carla.Rotation(pitch=0.000000, yaw=0.019546, roll=0.000000))
