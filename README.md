@@ -1,6 +1,6 @@
 # CarFASE
- CarFASE is a  [Carla](https://carla.org/) based fault and  attack  simulation  engine  that  allows  to  evaluate the behavior of autonomous driving stacks in the presence of faults and attacks. ComFASE is built on top of [OMNeT++](https://omnetpp.org/), and integrates [SUMO](https://www.eclipse.org/sumo/), and [Veins](https://veins.car2x.org/).  
- To automate the campagin run we use [Python](https://www.python.org/), where we configure the attack injection campagin and log the injected data. To demonstrate the usefullness of ComFASE we used platooning scenario provided in [Plexe-Veins](https://plexe.car2x.org/tutorial/).
+ CarFASE is a  [Carla](https://carla.org/) based fault and  attack  simulation  engine  that  allows  to  evaluate the behavior of autonomous driving (AD) stacks in the presence of faults and attacks. [OpenPilot](https://comma.ai/openpilot) is one example of AD stacks that is used to intigrate with CarFASE. Below picture shows a high-level architecture of CarFASE along
+with its connection to Carla and OpenPilot.
 
 <p align="center">
   <br><br>
@@ -9,14 +9,7 @@
 <br/> 
 <br/> 
 
-|       Simulator       |                                 Definition                        |
-| ----------------------| ----------------------------------------------------------------- |
-| *OMNeT++*             | is a modular, component-based C++ simulation library and framework|
-| *Veins*               | is a framework for running vehicular network simulations          |
-| *Plexe*               | is a cooperative driving framework extending SUMO and Veins permitting the realistic simulation of platooning|
-| *SUMO*                | is a microscopic traffic simulator                                  |
-
-
+CarFASE consists of three main components, scenario configurator, fault library, and campaign configurator. The scenario configurator is responsible for creating a scenario that consists of a number of vehicles, a certain weather condition, the choice of maps, and the trajectory of vehicles. The fault library contains implementations of different fault models. Finally, the campaign configurator is responsible for applying the chosen fault parameters.
 -----------------------
 # ComFASE Integration
 ## Option1: ComFASE in OMNeT++ IDE
