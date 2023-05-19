@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 def Auto_run():
   subprocess.run(['xterm', '-e', '/opt/sim/carla-files/openpilot/carla13/CarlaUE4.sh --world-port=2099 -RenderOffScreen & '
                                    '/opt/sim/carla-files/openpilot/tools/sim/launch_openpilot.sh & '
-                                  '/opt/sim/carla-files/openpilot/tools/sim/campaign_setup.py & '
+                                  '/opt/sim/carla-files/openpilot/tools/sim/scenario_setup.py & '
                                  '/opt/sim/carla-files/openpilot/tools/sim/bridge.py '])
 
 ##############################################################################################
