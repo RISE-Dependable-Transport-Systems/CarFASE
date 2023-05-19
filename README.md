@@ -24,8 +24,35 @@ Follow the instructions provided by the OpenPilot [here](https://github.com/comm
 
 ### Integrating CarFASE into the OpenPilot
 1. Clone the [CarFASE](https://github.com/RISE-Dependable-Transport-Systems/CarFASE) repository into the sim folder in **../openpilot/tools/sim**
-2. 
-3.  
+2. Modify the **configure_campaign.xml** file by choosing the fault model and tuning a value for the parameteres such as faultActivationTime, FaultValue, and FaultDuration.
+```
+
+<configure>
+
+	<!-- ################################## Fault Model Selection ################################## -->
+	<Fault_type 
+	brightness="true"
+	s_p="false"
+	/>
+	
+	<!-- ############################## Brightness Fault Parameters ############################## -->
+	<brightness
+	faultInitiationStartTime="20" 	        faultInitiationEndTime="30.1"           faultInitiationTimeStep="0.5" 
+	faultStartValue="0" 			faultEndValue="7.51" 			faultValueStep="0.3" 
+	faultMinDuration="1" 			faultMaxDuration="10.1" 		faultDurationStep="1" 
+	/>
+	
+	<!-- ################################## S&P Fault Parameters ################################## -->
+	<s_p
+	faultInitiationStartTime="20" 	        faultInitiationEndTime="30.1"           faultInitiationTimeStep="0.5" 
+	faultStartValue="1" 			faultEndValue="7.51" 			faultValueStep="0.3" 
+	faultMinDuration="8" 			faultMaxDuration="10.1" 		faultDurationStep="1" 
+	/>
+	
+	
+</configure>
+```
+4.  
 
 3. To use the **ComFASE** in the desired part of the code, add below lines to call comfase header file: 
 ```
