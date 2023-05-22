@@ -24,7 +24,7 @@ from common.realtime import DT_DMON, Ratekeeper
 from selfdrive.car.honda.values import CruiseButtons
 from selfdrive.test.helpers import set_params_enabled
 
-from injector import rgb_fa, can_fa, log_sensor_data
+from fault_lib import rgb_fa, log_sensor_data
 from timeit import default_timer as timer
 time_s = timer()
 parser = argparse.ArgumentParser(description='Bridge between CARLA and openpilot.')

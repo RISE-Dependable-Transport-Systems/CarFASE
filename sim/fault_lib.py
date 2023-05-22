@@ -8,7 +8,7 @@ import argparse
 import xml.etree.ElementTree as ET
 from PIL import Image, ImageEnhance, ImageOps
 import re
-from auto_run import Ex_data
+
 
 # print('Numpy version is= ', np.__version__)
 root = ET.parse('experiment_data.xml').getroot()
