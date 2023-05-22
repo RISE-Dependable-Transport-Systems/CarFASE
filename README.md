@@ -1,5 +1,5 @@
 # CarFASE
- CarFASE is a  [Carla](https://carla.org/) based fault and  attack  simulation  engine  that  allows  to  evaluate the behavior of autonomous driving (AD) stacks in the presence of faults and attacks. [OpenPilot](https://comma.ai/openpilot) is one example of AD stacks that is used to intigrate with CarFASE. Below picture shows a high-level architecture of CarFASE along
+ CarFASE is a  [Carla](https://carla.org/) based fault and  attack  simulation  engine  that  allows  to  evaluate the behavior of autonomous driving (AD) stacks in the presence of faults and attacks. [OpenPilot](https://comma.ai/openpilot) is one example of AD stacks that we used to intigrate with CarFASE. Below picture shows a high-level architecture of CarFASE along
 with its connection to Carla and OpenPilot.
 
 <p align="center">
@@ -65,5 +65,5 @@ client.start_recorder("/replace with your own system's path where you want to st
 
 
 ## License
-
+CarFASE is an open source tool, the tool is free: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 ## Papers
