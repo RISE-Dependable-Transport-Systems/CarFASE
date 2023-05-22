@@ -24,7 +24,7 @@ Follow the instructions provided by the OpenPilot [here](https://github.com/comm
 
 ### Integrating CarFASE into the OpenPilot
 1. Clone the [CarFASE](https://github.com/RISE-Dependable-Transport-Systems/CarFASE) repository into the sim folder in **../openpilot/tools/sim**
-2. Modify the **configure_campaign.xml** file by choosing the fault model and tuning a value for the parameteres such as faultActivationTime, FaultValue, and FaultDuration.
+2. Modify the **configure_campaign.xml** file by choosing a fault model and tuning a value for the parameteres such as faultActivationTime, FaultValue, and FaultDuration.
 ```
 
 <configure>
