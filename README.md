@@ -15,7 +15,7 @@ CarFASE consists of three main components, scenario configurator, fault library,
 ## Step1: setup of Carla and OpenPilot
 Prepare the simulation environment by downloading the below-mentioned versions of Carla and OpenPilot.
 
-Note: CarmFASE is tested on the below-mentioned versions of the simulators:
+Note: CarmFASE is developed/tested on the below versions of the simulators:
 
 * [Carla 0.9.13](https://carla.org/2021/11/16/release-0.9.13/)
 * [OpenPilot 0.8.12](https://github.com/commaai/openpilot/releases/tag/v0.8.12) 
@@ -24,7 +24,7 @@ Follow the instructions provided by the OpenPilot [here](https://github.com/comm
 
 ### Integrating CarFASE into the OpenPilot
 1. Clone the [CarFASE](https://github.com/RISE-Dependable-Transport-Systems/CarFASE) repository into the sim folder in **../openpilot/tools/sim**
-2. Modify the **configure_campaign.xml** file by choosing the fault model and tuning a value for the parameteres such as faultActivationTime, FaultValue, and FaultDuration.
+2. Modify the **configure_campaign.xml** file by choosing a fault model and tuning a value for the parameteres such as faultActivationTime, FaultValue, and FaultDuration.
 ```
 
 <configure>
