@@ -67,3 +67,4 @@ client.start_recorder("/replace with your own system's path where you want to st
 ## License
 CarFASE is an open source tool, the tool is free: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 ## Papers
+[DSN_SSIV_2023](https://github.com/RISE-Dependable-Transport-Systems/CarFASE/blob/main/Documentation/CarFASE__DSN_SSIV_2023.pdf)
